@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".presentation.fragments.SignUpSingInFragment">
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="200dp"
-        android:text="Зарегистрироваться"
-        android:textSize="18sp"
+        android:minWidth="@dimen/min_width_btn"
+        android:text="@string/register_btn"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -21,12 +21,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.7" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/loginBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Войти"
-        android:textSize="18sp"
+        android:text="@string/login_btn"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/registerBtn"
         app:layout_constraintHorizontal_bias="0.0"

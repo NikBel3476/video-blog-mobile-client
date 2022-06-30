@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">videoBlogMobileClient</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_btn">Зарегистрироваться</string>
+    <string name="login_btn">Войти</string>
+
+    <!-- Edit texts. -->
+    <string name="login_et">Введите логин</string>
+    <string name="email_et">Электронная почта</string>
+    <string name="pas_et">Введите пароль</string>
+    <string name="confirm_pas_et">Подтвердите пароль</string>
 </resources>
