@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">videoBlogMobileClient</string>
+
+    <!-- Buttons. -->
     <string name="register_btn">Зарегистрироваться</string>
     <string name="login_btn">Войти</string>
 
