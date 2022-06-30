@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.RegisterFragment">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height_et"
+        android:gravity="center"
+        android:hint="@string/login_et"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height_et"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="@string/email_et"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height_et"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="@string/pas_et"
+        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
+        app:layout_constraintStart_toStartOf="@+id/registerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height_et"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="@string/confirm_pas_et"
+        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
+        app:layout_constraintStart_toStartOf="@+id/registerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:minWidth="@dimen/min_width_btn"
+        android:text="@string/register_btn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
