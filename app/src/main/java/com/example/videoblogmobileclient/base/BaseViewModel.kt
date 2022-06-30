@@ -1,10 +1,10 @@
-package com.example.videoblogmobileclient.presentation.viewmodels.base
+package com.example.videoblogmobileclient.base
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-class BaseViewModel: ViewModel() {
+open class BaseViewModel: ViewModel() {
     private val compositeDisposable = CompositeDisposable()
 
     override fun onCleared() {

@@ -1,5 +1,6 @@
 package com.example.videoblogmobileclient.di
 
+import com.example.videoblogmobileclient.presentation.viewmodels.SingUpSingInViewModel
 import com.example.videoblogmobileclient.utils.Constants.BASE_URL
 import com.google.gson.Gson
 import dagger.Module
@@ -13,6 +14,12 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
+
+    @Provides
+    @Singleton
+    fun provideMainScreenViewModel(retrofit: Retrofit): SingUpSingInViewModel {
+        return SingUpSingInViewModel(retrofit)
+    }
 
     @Provides
     @Singleton
