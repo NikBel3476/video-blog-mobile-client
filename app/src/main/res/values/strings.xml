@@ -10,4 +10,6 @@
     <string name="email_et">Электронная почта</string>
     <string name="pas_et">Введите пароль</string>
     <string name="confirm_pas_et">Подтвердите пароль</string>
+
+    <string name="test_wrapper_text">Loading...</string>
 </resources>

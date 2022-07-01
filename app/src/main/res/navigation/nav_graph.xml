@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wrapperFragment">
+
+    <fragment
+        android:id="@+id/wrapperFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.WrapperFragment"
+        android:label="fragment_wrapper"
+        tools:layout="@layout/fragment_wrapper" >
+        <action
+            android:id="@+id/action_wrapperFragment_to_signUpSingInFragment"
+            app:destination="@id/signUpSingInFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/wrapperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpSingInFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.SignUpSingInFragment"
+        android:label="fragment_sign_up_sing_in"
+        tools:layout="@layout/fragment_sign_up_sing_in" >
+        <action
+            android:id="@+id/action_signUpSingInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signUpSingInFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
