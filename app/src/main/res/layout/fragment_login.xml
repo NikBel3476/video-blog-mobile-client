@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.RegisterFragment">
+    tools:context=".presentation.fragments.LoginFragment">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etLogin"
@@ -17,19 +17,7 @@
         app:layout_constraintEnd_toEndOf="@+id/etPassword"
         app:layout_constraintStart_toStartOf="@+id/etPassword"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:minHeight="@dimen/min_height_et"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="@string/email_et"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintStart_toStartOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etPassword"
@@ -41,19 +29,8 @@
         android:hint="@string/pas_et"
         app:layout_constraintEnd_toEndOf="@+id/registerBtn"
         app:layout_constraintStart_toStartOf="@+id/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etConfirmPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:minHeight="@dimen/min_height_et"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="@string/confirm_pas_et"
-        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
-        app:layout_constraintStart_toStartOf="@+id/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registerBtn"
@@ -61,12 +38,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:minWidth="@dimen/min_width_btn"
-        android:text="@string/register_btn"
+        android:text="@string/login_btn"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
