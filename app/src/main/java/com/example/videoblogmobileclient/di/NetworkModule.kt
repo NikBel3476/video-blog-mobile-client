@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
+    // TODO: Move to app module
     @Provides
     @Singleton
     fun provideMainScreenViewModel(retrofit: Retrofit): SingUpSingInViewModel {

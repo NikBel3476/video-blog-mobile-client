@@ -10,9 +10,13 @@ import retrofit2.Retrofit
 import javax.inject.Inject
 
 class SingUpSingInViewModel
-constructor(
+(
     private val retrofit: Retrofit
 ): BaseViewModel() {
+
+    init {
+        Log.d(LOG_TAG, "vmCreated")
+    }
 
     fun fetchData() {
         val service = retrofit.create(VideoBlogApiService::class.java)
