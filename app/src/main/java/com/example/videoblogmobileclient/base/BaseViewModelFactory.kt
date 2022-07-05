@@ -2,18 +2,20 @@ package com.example.videoblogmobileclient.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import java.lang.IllegalArgumentException
 import javax.inject.Inject
 import javax.inject.Provider
+import javax.inject.Singleton
 
+@Singleton
 class BaseViewModelFactory @Inject constructor(
-    vmProvider: Provider<ViewModel>
+    private val creators: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
 ): ViewModelProvider.Factory {
-
-    private val providers = mapOf<Class<*>, Provider<out ViewModel>>(
-        BaseViewModel::class.java to vmProvider
-    )
-
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return providers[modelClass]!!.get() as T
+        val creator = creators[modelClass] ?: creators.entries.firstOrNull {
+            modelClass.isAssignableFrom(it.key)
+        }?.value ?: throw IllegalArgumentException("unknown model class $modelClass")
+        @Suppress("UNCHECKED_CAST")
+        return creator.get() as T
     }
 }

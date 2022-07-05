@@ -10,7 +10,7 @@ import retrofit2.Retrofit
 import javax.inject.Inject
 
 class SingUpSingInViewModel
-(
+@Inject constructor(
     private val retrofit: Retrofit
 ): BaseViewModel() {
 
