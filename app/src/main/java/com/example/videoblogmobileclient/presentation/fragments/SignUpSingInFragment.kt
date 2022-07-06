@@ -17,19 +17,15 @@ import com.example.videoblogmobileclient.utils.Constants.LOG_TAG
 import javax.inject.Inject
 
 class SignUpSingInFragment : Fragment() {
-    @Inject
-    lateinit var vmFactory: ViewModelProvider.Factory
-    private val viewModel: SingUpSingInViewModel by viewModels {
-        vmFactory
-    }
-    //private lateinit var viewModel: SingUpSingInViewModel
+    //private val viewModel =
+    private lateinit var viewModel: SingUpSingInViewModel
     lateinit var binding: FragmentSignUpSingInBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (this.activity?.applicationContext as App).applicationComponent.inject(this@SignUpSingInFragment)
         Log.d(LOG_TAG, "susi fragment created")
-
+        viewModel = (this.activity?.applicationContext as App).applicationComponent.factory.create(SingUpSingInViewModel::class.java)
     }
 
     override fun onCreateView(

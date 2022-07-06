@@ -12,21 +12,19 @@ import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.app.App
 import com.example.videoblogmobileclient.databinding.FragmentRegisterBinding
 import com.example.videoblogmobileclient.presentation.viewmodels.RegisterViewModel
+import com.example.videoblogmobileclient.presentation.viewmodels.SingUpSingInViewModel
 import com.example.videoblogmobileclient.utils.Constants
 import javax.inject.Inject
 
 class RegisterFragment : Fragment() {
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-    private val viewModel: RegisterViewModel by viewModels {
-        viewModelFactory
-    }
+    private lateinit var viewModel: RegisterViewModel
     private lateinit var binding: FragmentRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (this.activity?.applicationContext as App).applicationComponent.inject(this@RegisterFragment)
         Log.d(Constants.LOG_TAG, "register fragment created")
+        viewModel = (this.activity?.applicationContext as App).applicationComponent.factory.create(RegisterViewModel::class.java)
     }
 
     override fun onCreateView(

@@ -3,6 +3,7 @@ package com.example.videoblogmobileclient.di
 import android.app.Application
 import android.text.style.BulletSpan
 import com.example.videoblogmobileclient.app.App
+import com.example.videoblogmobileclient.base.BaseViewModelFactory
 import com.example.videoblogmobileclient.presentation.fragments.*
 import com.example.videoblogmobileclient.presentation.viewmodels.SingUpSingInViewModel
 import dagger.BindsInstance
@@ -12,17 +13,13 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [
-    AndroidInjectionModule::class,
     NetworkModule::class,
     ViewModelModule::class
 ])
 interface ApplicationComponent {
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun application(application: Application): Builder
-        fun build(): ApplicationComponent
-    }
+
+    val factory: BaseViewModelFactory
+
     //App
     fun inject(app: App)
 
