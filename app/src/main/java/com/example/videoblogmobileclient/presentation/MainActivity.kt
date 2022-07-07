@@ -2,9 +2,8 @@ package com.example.videoblogmobileclient.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.ActivityMainBinding
-import com.example.videoblogmobileclient.presentation.fragments.SignUpSingInFragment
+import dagger.android.AndroidInjection
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AndroidInjection.inject(this)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }

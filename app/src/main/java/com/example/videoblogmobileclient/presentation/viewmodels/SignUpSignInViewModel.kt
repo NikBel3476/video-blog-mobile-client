@@ -9,16 +9,13 @@ import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class SingUpSingInViewModel
-(
-    private val retrofit: Retrofit
-): BaseViewModel() {
+class SignUpSignInViewModel @Inject constructor(): BaseViewModel() {
 
     init {
-        Log.d(LOG_TAG, "vmCreated")
+        Log.d(LOG_TAG, "susi vmCreated")
     }
 
-    fun fetchData() {
+    /*fun fetchData() {
         val service = retrofit.create(VideoBlogApiService::class.java)
 
         service.getUsers()
@@ -31,5 +28,5 @@ class SingUpSingInViewModel
             }, {
                 Log.d(LOG_TAG, it.message.toString())
             })
-    }
+    }*/
 }
