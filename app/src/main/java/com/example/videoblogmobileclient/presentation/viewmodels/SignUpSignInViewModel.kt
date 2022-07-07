@@ -12,7 +12,7 @@ import javax.inject.Inject
 class SignUpSignInViewModel @Inject constructor(): BaseViewModel() {
 
     init {
-        Log.d(LOG_TAG, "vmCreated")
+        Log.d(LOG_TAG, "susi vmCreated")
     }
 
     /*fun fetchData() {

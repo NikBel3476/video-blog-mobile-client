@@ -3,6 +3,7 @@ package com.example.videoblogmobileclient.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.videoblogmobileclient.base.BaseViewModelFactory
+import com.example.videoblogmobileclient.presentation.viewmodels.RegisterViewModel
 import com.example.videoblogmobileclient.presentation.viewmodels.SignUpSignInViewModel
 import dagger.Binds
 import dagger.Module
@@ -19,5 +20,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SignUpSignInViewModel::class)
     internal abstract fun bindSignUpSignInViewModel(signInViewModel: SignUpSignInViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(RegisterViewModel::class)
+    internal abstract fun bindRegisterViewModel(registerViewModel: RegisterViewModel): ViewModel
 
 }

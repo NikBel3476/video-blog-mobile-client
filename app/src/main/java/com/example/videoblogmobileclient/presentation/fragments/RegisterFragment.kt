@@ -16,20 +16,21 @@ import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 class RegisterFragment : Fragment() {
-    /*@Inject
+    @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-    lateinit var viewModel: RegisterViewModel*/
+
+    lateinit var viewModel: RegisterViewModel
     private lateinit var binding: FragmentRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //AndroidSupportInjection.inject(this)
+        AndroidSupportInjection.inject(this)
         Log.d(Constants.LOG_TAG, "register fragment created")
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        //viewModel = injectViewModel(viewModelFactory)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = injectViewModel(viewModelFactory)
     }
 
     override fun onCreateView(
