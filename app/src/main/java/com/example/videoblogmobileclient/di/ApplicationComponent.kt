@@ -1,29 +1,26 @@
 package com.example.videoblogmobileclient.di
 
 import android.app.Application
-import android.text.style.BulletSpan
 import com.example.videoblogmobileclient.app.App
-import com.example.videoblogmobileclient.base.BaseViewModelFactory
-import com.example.videoblogmobileclient.presentation.fragments.*
-import com.example.videoblogmobileclient.presentation.viewmodels.SingUpSingInViewModel
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
-import javax.inject.Singleton
+import dagger.android.AndroidInjector
 
-@Singleton
 @Component(modules = [
-    NetworkModule::class,
-    ViewModelModule::class
+    AndroidInjectionModule::class,
+    ViewModelModule::class,
+    FragmentBindingModule::class,
+    ActivityBindingModule::class
 ])
-interface ApplicationComponent {
+interface ApplicationComponent: AndroidInjector<App> {
 
-    val factory: BaseViewModelFactory
+    @Component.Builder
+    interface Builder {
+        @BindsInstance
+        fun application(application: Application): ApplicationComponent.Builder
 
-    //App
-    fun inject(app: App)
+        fun build(): ApplicationComponent
+    }
 
-    //Fragments
-    fun inject(fragment: SignUpSingInFragment)
-    fun inject(fragment: RegisterFragment)
 }

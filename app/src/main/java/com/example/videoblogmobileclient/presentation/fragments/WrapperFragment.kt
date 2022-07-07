@@ -25,7 +25,7 @@ class WrapperFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
-            findNavController().navigate(R.id.action_wrapperFragment_to_signUpSingInFragment)
+            findNavController().navigate(R.id.action_wrapperFragment_to_signUpSignInFragment)
         }, Constants.WRAPPER_TIME)
     }
 }

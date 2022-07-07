@@ -11,21 +11,21 @@
         android:label="fragment_wrapper"
         tools:layout="@layout/fragment_wrapper" >
         <action
-            android:id="@+id/action_wrapperFragment_to_signUpSingInFragment"
-            app:destination="@id/signUpSingInFragment"
+            android:id="@+id/action_wrapperFragment_to_signUpSignInFragment"
+            app:destination="@id/signUpSignInFragment"
             app:popUpToInclusive="true"
             app:popUpTo="@id/wrapperFragment" />
     </fragment>
     <fragment
-        android:id="@+id/signUpSingInFragment"
-        android:name="com.example.videoblogmobileclient.presentation.fragments.SignUpSingInFragment"
+        android:id="@+id/signUpSignInFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.SignUpSignInFragment"
         android:label="fragment_sign_up_sing_in"
         tools:layout="@layout/fragment_sign_up_sing_in" >
         <action
-            android:id="@+id/action_signUpSingInFragment_to_registerFragment"
+            android:id="@+id/action_signUpSignInFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_signUpSingInFragment_to_loginFragment"
+            android:id="@+id/action_signUpSignInFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment

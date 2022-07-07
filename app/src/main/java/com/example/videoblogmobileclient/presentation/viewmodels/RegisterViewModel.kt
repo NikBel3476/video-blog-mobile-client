@@ -6,10 +6,7 @@ import com.example.videoblogmobileclient.utils.Constants
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class RegisterViewModel
-@Inject constructor(
-    private val retrofit: Retrofit
-): BaseViewModel() {
+class RegisterViewModel constructor(): BaseViewModel() {
 
     init {
         Log.d(Constants.LOG_TAG, "RegisterViewModel is Created")

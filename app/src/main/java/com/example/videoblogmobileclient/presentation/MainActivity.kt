@@ -2,9 +2,7 @@ package com.example.videoblogmobileclient.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.ActivityMainBinding
-import com.example.videoblogmobileclient.presentation.fragments.SignUpSingInFragment
 
 class MainActivity : AppCompatActivity() {
 
