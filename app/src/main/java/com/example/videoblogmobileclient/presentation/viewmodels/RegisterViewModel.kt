@@ -5,10 +5,9 @@ import com.example.videoblogmobileclient.base.BaseViewModel
 import com.example.videoblogmobileclient.data.models.User
 import com.example.videoblogmobileclient.data.source.remote.VideoBlogApiService
 import com.example.videoblogmobileclient.utilities.Constants
-import retrofit2.Retrofit
 import javax.inject.Inject
 
-class RegisterViewModel @Inject constructor(retrofit: Retrofit): BaseViewModel() {
+class RegisterViewModel @Inject constructor(private val service: VideoBlogApiService): BaseViewModel() {
 
     fun registerUser(
         login: String,

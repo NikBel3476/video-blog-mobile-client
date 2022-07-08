@@ -27,6 +27,7 @@ class SignUpSignInFragment : Fragment() {
         super.onCreate(savedInstanceState)
         AndroidSupportInjection.inject(this)
         Log.d(LOG_TAG, "susi fragment created")
+        viewModel = injectViewModel(viewModelFactory)
     }
 
     override fun onCreateView(
@@ -37,14 +38,9 @@ class SignUpSignInFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = injectViewModel(viewModelFactory)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //viewModel.fetchData()
+        viewModel.fetchData()
         binding.registerBtn.setOnClickListener{
             findNavController().navigate(R.id.action_signUpSignInFragment_to_registerFragment)
         }

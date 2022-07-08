@@ -10,6 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import com.example.videoblogmobileclient.data.utils.Constants.VIDEO_BLOG_SERVICE_URL
 import com.google.gson.Gson
 import okhttp3.logging.HttpLoggingInterceptor
+import javax.inject.Singleton
 
 @Module
 class NetworkModule {
