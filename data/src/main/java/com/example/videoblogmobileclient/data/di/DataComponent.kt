@@ -1,0 +1,12 @@
+package com.example.videoblogmobileclient.data.di
+
+import dagger.Component
+
+@Component(modules = [NetworkModule::class])
+interface DataComponent {
+
+    @Component.Builder
+    interface Builder {
+        fun build(): DataComponent
+    }
+}
