@@ -1,6 +1,5 @@
 package com.example.videoblogmobileclient.presentation.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,7 +12,7 @@ import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.FragmentSignUpSingInBinding
 import com.example.videoblogmobileclient.helpers.injectViewModel
 import com.example.videoblogmobileclient.presentation.viewmodels.SignUpSignInViewModel
-import com.example.videoblogmobileclient.utils.Constants.LOG_TAG
+import com.example.videoblogmobileclient.utilities.Constants.LOG_TAG
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
