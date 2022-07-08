@@ -1,4 +1,4 @@
-package com.example.videoblogmobileclient.utils
+package com.example.videoblogmobileclient.utilities
 
 object Constants {
     const val BASE_URL = "https://localhost:7240/api/"

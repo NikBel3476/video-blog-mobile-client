@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.FragmentWrapperBinding
-import com.example.videoblogmobileclient.utils.Constants
+import com.example.videoblogmobileclient.utilities.Constants
 
 class WrapperFragment : Fragment() {
     lateinit var binding: FragmentWrapperBinding
@@ -26,6 +26,6 @@ class WrapperFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
             findNavController().navigate(R.id.action_wrapperFragment_to_signUpSignInFragment)
-        }, Constants.WRAPPER_TIME)
+        }, com.example.videoblogmobileclient.utilities.Constants.WRAPPER_TIME)
     }
 }

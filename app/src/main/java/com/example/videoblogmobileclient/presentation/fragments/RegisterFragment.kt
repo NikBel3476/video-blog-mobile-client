@@ -1,6 +1,5 @@
 package com.example.videoblogmobileclient.presentation.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.videoblogmobileclient.databinding.FragmentRegisterBinding
 import com.example.videoblogmobileclient.helpers.injectViewModel
 import com.example.videoblogmobileclient.presentation.viewmodels.RegisterViewModel
-import com.example.videoblogmobileclient.utils.Constants
+import com.example.videoblogmobileclient.utilities.Constants
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
@@ -25,7 +24,7 @@ class RegisterFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidSupportInjection.inject(this)
-        Log.d(Constants.LOG_TAG, "register fragment created")
+        Log.d(com.example.videoblogmobileclient.utilities.Constants.LOG_TAG, "register fragment created")
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
