@@ -54,7 +54,8 @@ class RegisterFragment : Fragment() {
                 viewModel.registerUser(
                     login = loginEditText.text.toString(),
                     email = emailEditText.text.toString(),
-                    password = passwordEditText.text.toString()
+                    password = passwordEditText.text.toString(),
+                    confirmPassword = confirmPasswordEditText.text.toString()
                 )
             }
     }
