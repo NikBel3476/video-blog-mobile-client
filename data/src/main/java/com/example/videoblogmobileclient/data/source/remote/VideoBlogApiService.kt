@@ -1,5 +1,6 @@
 package com.example.videoblogmobileclient.data.source.remote
 
+import com.example.videoblogmobileclient.data.models.ResponseExample
 import com.example.videoblogmobileclient.data.models.User
 import io.reactivex.Single
 import retrofit2.Call
@@ -13,8 +14,8 @@ interface VideoBlogApiService {
     @GET("users")
     fun getUsers(): Single<List<User>>
 
-    @POST("/account/registration")
-    fun register(@Body user: User): Call<User>
+    @POST("registration")
+    fun register(@Body user: User): Call<ResponseExample>
 
     // TODO: wait fot server features
     @POST("")
