@@ -18,9 +18,7 @@
     <string name="warn_field_length">Minimum 8 character password</string>
     <string name="warn_pas_upper_case">Must contain 1 upper-case character</string>
     <string name="warn_pas_lower_case">Must contain 1 lower-case character</string>
-    <string name="warn_pas_spec_char">Must contain 1 special character (@#\$%^&amp;+=)</string>
+    <string name="warn_pas_spec_char">Must contain 1 special character (@#\$%^&amp;+=_)</string>
     <string name="warn_email">Invalid Email address</string>
-    <string name="warn_login_spec_char">Must NOT contain special characters (@#\$%^&amp;+=)</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="warn_login_spec_char">Must NOT contain special characters (@#\$%^&amp;+=_)</string>
 </resources>

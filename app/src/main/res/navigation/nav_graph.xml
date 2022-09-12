@@ -38,5 +38,15 @@
         android:name="com.example.videoblogmobileclient.presentation.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_newsFeedFragment"
+            app:destination="@id/newsFeedFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/newsFeedFragment"/>
     </fragment>
+    <fragment
+        android:id="@+id/newsFeedFragment"
+        android:name="com.example.videoblogmobileclient.presentation.fragments.NewsFeedFragment"
+        android:label="fragment_news_feed"
+        tools:layout="@layout/fragment_news_feed" />
 </navigation>

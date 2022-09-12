@@ -91,7 +91,7 @@ class RegisterFragment : Fragment() {
             return getString(R.string.warn_pas_upper_case)
         } else if(!password.matches(".*[a-z].*".toRegex()))
             return getString(R.string.warn_pas_lower_case)
-        else if(!password.matches(".*[@#\$%^&+=].*".toRegex()))
+        else if(!password.matches(".*[@#\$%^&+=_].*".toRegex()))
             return getString(R.string.warn_pas_spec_char)
         return null
     }
