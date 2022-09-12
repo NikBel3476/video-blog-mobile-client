@@ -12,11 +12,13 @@
     <string name="confirm_pas_et">Подтвердите пароль</string>
 
     <string name="test_wrapper_text">Loading...</string>
+    <string name="registration_fragment_title">Registration</string>
+    <string name="login_fragment_title">Sign In</string>
 
     <!-- Validate fields strings. -->
     <string name="required">Required!</string>
     <string name="warn_password_field_length">Minimum 6 character password</string>
-    <string name="warn_login_field_length">Minimum 6 character login</string>
+    <string name="warn_login_field_length">Minimum 3 character login</string>
     <string name="warn_pas_upper_case">Must contain 1 upper-case character</string>
     <string name="warn_pas_lower_case">Must contain 1 lower-case character</string>
     <string name="warn_pas_spec_char">Must contain 1 special character (@#\$%^&amp;+=_)</string>

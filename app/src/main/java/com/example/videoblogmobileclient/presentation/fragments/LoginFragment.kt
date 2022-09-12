@@ -24,5 +24,12 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.loginBtn.setOnClickListener {
+            submit()
+        }
+    }
+
+    private fun submit() {
+        findNavController().navigate(R.id.action_loginFragment_to_newsFeedFragment)
     }
 }

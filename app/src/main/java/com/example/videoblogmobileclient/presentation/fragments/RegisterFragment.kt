@@ -69,7 +69,7 @@ class RegisterFragment : Fragment() {
 
     private fun validateLogin(): String? {
         val login = binding.loginEditText.text.toString()
-        if(login.length < 8)
+        if(login.length < 3)
             return getString(R.string.warn_login_field_length)
         else if(login.matches(".*[@#\$%^&+=].*".toRegex()))
             return getString(R.string.warn_login_spec_char)
