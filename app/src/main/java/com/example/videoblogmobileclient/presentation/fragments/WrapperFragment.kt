@@ -26,6 +26,6 @@ class WrapperFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
             findNavController().navigate(R.id.action_wrapperFragment_to_signUpSignInFragment)
-        }, com.example.videoblogmobileclient.utilities.Constants.WRAPPER_TIME)
+        }, Constants.WRAPPER_TIME)
     }
 }

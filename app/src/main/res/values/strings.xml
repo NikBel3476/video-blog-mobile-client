@@ -21,4 +21,6 @@
     <string name="warn_pas_spec_char">Must contain 1 special character (@#\$%^&amp;+=)</string>
     <string name="warn_email">Invalid Email address</string>
     <string name="warn_login_spec_char">Must NOT contain special characters (@#\$%^&amp;+=)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -17,8 +17,7 @@ interface VideoBlogApiService {
     @POST("registration")
     fun register(@Body user: User): Call<ResponseExample>
 
-    // TODO: wait fot server features
-    @POST("")
+    @POST("login")
     fun singIn()
 
     // TODO: wait fot server features

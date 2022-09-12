@@ -37,5 +37,6 @@
         android:id="@+id/loginFragment"
         android:name="com.example.videoblogmobileclient.presentation.fragments.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+    </fragment>
 </navigation>

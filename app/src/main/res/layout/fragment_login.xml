@@ -27,13 +27,13 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:hint="@string/pas_et"
-        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
-        app:layout_constraintStart_toStartOf="@+id/registerBtn"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
         app:layout_constraintTop_toBottomOf="@+id/etLogin" />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -45,7 +45,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
