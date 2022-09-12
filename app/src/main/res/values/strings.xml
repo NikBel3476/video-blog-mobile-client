@@ -15,7 +15,8 @@
 
     <!-- Validate fields strings. -->
     <string name="required">Required!</string>
-    <string name="warn_field_length">Minimum 6 character password</string>
+    <string name="warn_password_field_length">Minimum 6 character password</string>
+    <string name="warn_login_field_length">Minimum 6 character login</string>
     <string name="warn_pas_upper_case">Must contain 1 upper-case character</string>
     <string name="warn_pas_lower_case">Must contain 1 lower-case character</string>
     <string name="warn_pas_spec_char">Must contain 1 special character (@#\$%^&amp;+=_)</string>

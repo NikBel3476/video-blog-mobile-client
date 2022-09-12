@@ -68,12 +68,11 @@ class RegisterFragment : Fragment() {
     }
 
     private fun validateLogin(): String? {
-        // TODO: Complete the method
-        /*val login = binding.loginEditText.text.toString()
+        val login = binding.loginEditText.text.toString()
         if(login.length < 8)
-            return R.string.warn_field_length.toString()
+            return getString(R.string.warn_login_field_length)
         else if(login.matches(".*[@#\$%^&+=].*".toRegex()))
-            return R.string.warn_login_spec_char.toString()*/
+            return getString(R.string.warn_login_spec_char)
         return null
     }
 
@@ -87,7 +86,7 @@ class RegisterFragment : Fragment() {
     private fun validatePassword(): String? {
         val password = binding.passwordEditText.text.toString()
         if(password.length < 6) {
-            return getString(R.string.warn_field_length)
+            return getString(R.string.warn_password_field_length)
         } else if(!password.matches(".*[A-Z].*".toRegex())){
             return getString(R.string.warn_pas_upper_case)
         } else if(!password.matches(".*[a-z].*".toRegex()))
