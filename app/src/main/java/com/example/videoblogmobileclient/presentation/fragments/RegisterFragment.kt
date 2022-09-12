@@ -64,6 +64,7 @@ class RegisterFragment : Fragment() {
         binding.loginEditText.setOnFocusChangeListener { _, focused -> if(!focused) binding.loginContainer.helperText = validateLogin() }
         binding.emailEditText.setOnFocusChangeListener { _, focused -> if(!focused) binding.emailContainer.helperText = validateEmail() }
         binding.passwordEditText.setOnFocusChangeListener{ _, focused -> if(!focused) binding.passwordContainer.helperText = validatePassword() }
+        binding.confirmPasswordEditText.setOnFocusChangeListener{ _, focused -> if(!focused) binding.confirmPasswordContainer.helperText = validateConfirmingPassword()}
     }
 
     private fun validateLogin(): String? {
@@ -85,7 +86,7 @@ class RegisterFragment : Fragment() {
 
     private fun validatePassword(): String? {
         val password = binding.passwordEditText.text.toString()
-        if(password.length < 8) {
+        if(password.length < 6) {
             return getString(R.string.warn_field_length)
         } else if(!password.matches(".*[A-Z].*".toRegex())){
             return getString(R.string.warn_pas_upper_case)
@@ -93,6 +94,12 @@ class RegisterFragment : Fragment() {
             return getString(R.string.warn_pas_lower_case)
         else if(!password.matches(".*[@#\$%^&+=_].*".toRegex()))
             return getString(R.string.warn_pas_spec_char)
+        return null
+    }
+
+    private fun validateConfirmingPassword(): String? {
+        if(binding.passwordEditText.text.toString() != binding.confirmPasswordEditText.text.toString())
+            return getString(R.string.warn_confirm_password_mismatch)
         return null
     }
 }
