@@ -14,10 +14,10 @@ interface VideoBlogApiService {
     @GET("users")
     fun getUsers(): Single<List<User>>
 
-    @POST("registration")
+    @POST("account/registration")
     fun register(@Body user: User): Call<ResponseExample>
 
-    @POST("login")
+    @POST("account/login")
     fun singIn()
 
     // TODO: wait fot server features
