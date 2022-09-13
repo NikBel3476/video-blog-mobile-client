@@ -15,17 +15,4 @@ class SignUpSignInViewModel @Inject constructor(
     init {
         Log.d(LOG_TAG, "susi vmCreated")
     }
-
-    fun fetchData() {
-        service.getUsers()
-            .subscribeOn(Schedulers.computation())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                for (user in it) {
-                    Log.d(LOG_TAG, user.login)
-                }
-            }, {
-                Log.d(LOG_TAG, it.message.toString())
-            })
-    }
 }

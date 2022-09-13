@@ -10,12 +10,8 @@ import retrofit2.http.POST
 
 interface VideoBlogApiService {
 
-    // TODO: delete this method 
-    @GET("users")
-    fun getUsers(): Single<List<User>>
-
     @POST("account/registration")
-    fun register(@Body user: User): Call<ResponseExample>
+    suspend fun register(@Body user: User): ResponseExample
 
     @POST("account/login")
     fun singIn()
