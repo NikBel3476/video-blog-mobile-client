@@ -7,5 +7,7 @@ data class VideotapeContent(
     val text_content: String,
     val date: Date,
     val author: User,
-    val content_uri: String
+    // TODO: Change content uri type to String
+    val content_uri: Int,
+    val author_icon: Int
 )

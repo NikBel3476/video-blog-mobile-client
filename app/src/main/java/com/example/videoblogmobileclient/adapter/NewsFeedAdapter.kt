@@ -18,7 +18,8 @@ class NewsFeedAdapter: RecyclerView.Adapter<NewsFeedAdapter.NewsFeedHolder>() {
         fun bind(content: VideotapeContent) {
             binding.tvTextContent.text = content.text_content
             binding.authorName.text = content.author.login
-
+            binding.authorIcon.setImageResource(content.author_icon)
+            binding.itemVideoHolder.setImageResource(content.content_uri)
             // TODO: Add Glide to set author icon
 
             // TODO: Add media player to show video
