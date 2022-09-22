@@ -25,4 +25,6 @@
     <string name="warn_email">Invalid Email address</string>
     <string name="warn_login_spec_char">Must NOT contain special characters (@#\$%^&amp;+=_)</string>
     <string name="warn_confirm_password_mismatch">Password mismatch</string>
+
+    <string name="news_feed_title">Видеоплёнка</string>
 </resources>
