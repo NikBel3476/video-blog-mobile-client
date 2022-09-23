@@ -1,13 +1,13 @@
 package com.example.videoblogmobileclient.data.models
 
-import java.util.*
+import com.example.videoblogmobileclient.data.models.user.GetUserModel
 
 data class VideotapeContent(
-    val id: Int,
-    val text_content: String,
-    val date: Date,
-    val author: User,
-    // TODO: Change content uri type to String
-    val content_uri: Int,
-    val author_icon: Int
+    val contentId: Int,
+    val author: GetUserModel,
+    val textContent: String?,
+    val contentUri: String?,
+    val date: Long,
+    val likesCount: Int,
+    val commentsCount: Int
 )

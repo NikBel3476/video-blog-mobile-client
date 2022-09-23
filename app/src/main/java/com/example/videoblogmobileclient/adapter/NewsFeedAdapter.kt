@@ -16,12 +16,12 @@ class NewsFeedAdapter: RecyclerView.Adapter<NewsFeedAdapter.NewsFeedHolder>() {
         private val binding = VideoContentItemBinding.bind(item)
 
         fun bind(content: VideotapeContent) {
-            binding.tvTextContent.text = content.text_content
-            binding.authorName.text = content.author.login
-            binding.authorIcon.setImageResource(content.author_icon)
-            binding.itemVideoHolder.setImageResource(content.content_uri)
             // TODO: Add Glide to set author icon
-
+            binding.authorName.text = content.author.userName
+            binding.tvTextContent.text = content.textContent
+            // TODO: Add Glide to set preview video image
+            binding.tvLikesCount.text = content.likesCount.toString()
+            binding.tvCommentsCount.text = content.commentsCount.toString()
             // TODO: Add media player to show video
         }
     }

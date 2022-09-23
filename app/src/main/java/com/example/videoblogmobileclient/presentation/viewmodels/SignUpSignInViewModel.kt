@@ -12,7 +12,4 @@ class SignUpSignInViewModel @Inject constructor(
     private val service: VideoBlogApiService
 ): BaseViewModel() {
 
-    init {
-        Log.d(LOG_TAG, "susi vmCreated")
-    }
 }

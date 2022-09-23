@@ -1,17 +1,14 @@
 package com.example.videoblogmobileclient.data.source.remote
 
 import com.example.videoblogmobileclient.data.models.ResponseExample
-import com.example.videoblogmobileclient.data.models.User
-import io.reactivex.Single
-import retrofit2.Call
+import com.example.videoblogmobileclient.data.models.user.RegisterUserModel
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface VideoBlogApiService {
 
     @POST("account/registration")
-    suspend fun register(@Body user: User): ResponseExample
+    suspend fun register(@Body user: RegisterUserModel): ResponseExample
 
     @POST("account/login")
     fun singIn()

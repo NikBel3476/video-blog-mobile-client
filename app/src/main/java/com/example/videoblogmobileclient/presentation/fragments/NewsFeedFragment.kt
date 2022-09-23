@@ -5,13 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.adapter.NewsFeedAdapter
-import com.example.videoblogmobileclient.data.models.User
 import com.example.videoblogmobileclient.data.models.VideotapeContent
+import com.example.videoblogmobileclient.data.models.user.GetUserModel
 import com.example.videoblogmobileclient.databinding.FragmentNewsFeedBinding
-import java.util.*
 
 class NewsFeedFragment : Fragment() {
     private lateinit var binding: FragmentNewsFeedBinding
@@ -20,42 +17,42 @@ class NewsFeedFragment : Fragment() {
     private val mockContent = mutableListOf<VideotapeContent>(
         VideotapeContent(
             0,
-            "Simple text to test recycler view",
-            Date(1240124),
-            User(
+            GetUserModel(
+                0,
                 "John",
-                "Email",
-                "123",
-                "123"
+                "icon_url_1"
             ),
-            R.drawable.kot,
-            R.drawable.ic_launcher_background
+            "Simple text to test recycler view",
+            "content uri",
+            1240124,
+            14,
+            3
         ),
         VideotapeContent(
-            1,
-            "Do you know this interested fact about sakura?!",
-            Date(1240124),
-            User(
-                "David",
-                "Email",
-                "123",
-                "123"
+            0,
+            GetUserModel(
+                0,
+                "Davie504",
+                "icon_url_1"
             ),
-            R.drawable.sakura,
-            R.drawable.ic_launcher_foreground
+            "Simple text to test recycler view",
+            "content uri",
+            1240124,
+            14,
+            3
         ),
         VideotapeContent(
-            2,
-            "New champion coming soon!!!",
-            Date(1240124),
-            User(
-                "David",
-                "Email",
-                "123",
-                "123"
+            0,
+            GetUserModel(
+                0,
+                "CodeMonkey",
+                "icon_url_1"
             ),
-            R.drawable.sova,
-            R.drawable.ic_launcher_foreground
+            "Simple text to test recycler view",
+            "content uri",
+            1240124,
+            14,
+            3
         )
     )
 

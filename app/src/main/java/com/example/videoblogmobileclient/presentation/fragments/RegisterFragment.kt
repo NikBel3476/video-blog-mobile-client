@@ -12,11 +12,9 @@ import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.FragmentRegisterBinding
 import com.example.videoblogmobileclient.helpers.injectViewModel
 import com.example.videoblogmobileclient.presentation.viewmodels.RegisterViewModel
-import com.example.videoblogmobileclient.utilities.Constants
 import com.example.videoblogmobileclient.utilities.Constants.LOG_TAG
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
-import kotlin.math.log
 
 class RegisterFragment : Fragment() {
     @Inject
