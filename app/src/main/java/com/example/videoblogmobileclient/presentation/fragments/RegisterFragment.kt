@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.videoblogmobileclient.R
 import com.example.videoblogmobileclient.databinding.FragmentRegisterBinding
 import com.example.videoblogmobileclient.helpers.injectViewModel
@@ -47,7 +48,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun submit() {
-        if(validateLogin() == null && validateEmail() == null && validatePassword() == null)
+        if(validateLogin() == null && validateEmail() == null && validatePassword() == null) {
             binding.apply {
                 viewModel.registerUser(
                     login = loginEditText.text.toString(),
@@ -56,6 +57,8 @@ class RegisterFragment : Fragment() {
                     confirmPassword = confirmPasswordEditText.text.toString()
                 )
             }
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
     }
 
     private fun focusListeners() {
